@@ -24,11 +24,17 @@ class Credential:
 
     def save_cred(self):
         '''
-        save_cred method saves credit objects into user_list
+        save_cred method saves credential objects into cred_list
         '''
 
         Credential.cred_list.append(self)
     # end save_cred
 
 
-    
+    def delete_cred(self):
+        '''
+        delete_cred method deletes a saved credential from the cred_list
+        '''
+
+        Credential.cred_list.remove(self)
+    # end delete_cred

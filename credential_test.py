@@ -62,7 +62,17 @@ class TestCredential(unittest.TestCase):
     #test_save_multiple_user
 
 
-    
+    def test_delete_cred(self):
+        '''
+        test_delete_cred to test if we can remove a credential from our credentials list
+        '''
+        self.new_cred.save_cred()
+        test_cred = Credential("ClintonClin","Twitter", "clintwitt", "clintwittpassword") # new credential
+        test_cred.save_cred()
+
+        self.new_cred.delete_cred()# Deleting a cred object
+        self.assertEqual(len(Credential.cred_list),1)
+
 
 
 
