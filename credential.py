@@ -18,8 +18,9 @@ class Credential:
         self.cred_app = cred_app
         self.cred_user = cred_user
         self.cred_pass = cred_pass
-
     #end init cred
+
+
 
     def save_cred(self):
         '''
@@ -27,4 +28,7 @@ class Credential:
         '''
 
         Credential.cred_list.append(self)
-        # end save_cred
+    # end save_cred
+
+
+    

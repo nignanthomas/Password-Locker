@@ -18,6 +18,14 @@ class TestCredential(unittest.TestCase):
     # end setUp
 
 
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        Credential.cred_list = []
+    # end tearDown
+
+
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
@@ -36,11 +44,25 @@ class TestCredential(unittest.TestCase):
         test_save_contact test case to test if the contact object is saved into
          the contact list
         '''
-        self.new_cred.save_cred() # saving the new contact
+        self.new_cred.save_cred() # saving the new credential
         self.assertEqual(len(Credential.cred_list),1)
 
     # end test_save_cred
 
+
+    def test_save_multiple_user(self):
+        '''
+        test_save_multiple_contact to check if we can save multiple user
+        objects to our cred_list
+        '''
+        self.new_cred.save_cred()
+        test_cred = Credential("ClintonClin","Twitter", "clintwitt", "clintwittpassword") # new credential
+        test_cred.save_cred()
+        self.assertEqual(len(Credential.cred_list),2)
+    #test_save_multiple_user
+
+
+    
 
 
 

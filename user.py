@@ -14,6 +14,5 @@ class User:
 
         self.username = username
         self.password = password
-        self.user_creds = []
-
+        
     #end init
