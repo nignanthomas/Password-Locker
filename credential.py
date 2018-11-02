@@ -58,3 +58,24 @@ class Credential:
             else:
                 return " :( Credential Not Found"
     #end search_cred
+
+
+    @classmethod
+    def display_creds(cls, user_search):
+        '''
+        method that returns the credentials list
+        '''
+        all_user_creds =[]
+        for credential in cls.cred_list:
+            if credential.username == user_search:
+                all_user_creds.append(credential)
+        return all_user_creds
+    #end display_creds
+
+
+
+
+
+
+
+#############
