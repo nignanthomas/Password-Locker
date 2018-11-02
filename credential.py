@@ -38,3 +38,23 @@ class Credential:
 
         Credential.cred_list.remove(self)
     # end delete_cred
+
+
+    @classmethod
+    def search_cred(cls, user_search, app_search,):
+        '''
+        Method that takes in an Appname and username and returns a credential that matches.
+
+        Args:
+            username: Username to search for
+            cred_app: Appname to search
+        Returns :
+            Credential that matches Username and Appname.
+        '''
+
+        for credential in cls.cred_list:
+            if credential.username == user_search && credential.cred_app == app_search:
+                return credential
+            else:
+                return " :( Credential Not Found"
+    #end search_cred
