@@ -14,5 +14,23 @@ class User:
 
         self.username = username
         self.password = password
-        
+
     #end init
+
+
+    def save_user(self):
+        '''
+        save_user method saves contact objects into user_list
+        '''
+
+        User.user_list.append(self)
+    #end save_contact
+
+
+
+
+
+
+
+
+#############################
