@@ -94,7 +94,9 @@ def header():
          | |_) | (_| \__ \__ \ |___| (_) | (__|   <  __/ |
          | .__/ \__,_|___/___/______\___/ \___|_|\_\___|_|
          | |
-         |_|                               by nignanthomas
+         |_|          ____   _                 by nignanthomas
+         Note: Press |CTRL|+|C| to leave at anytime !
+
     """)
 #end header
 
@@ -174,9 +176,17 @@ def main():
     menu_choice = 0
     while menu_choice != 3:
         menu()
-        menu_choice = int(input())
+        try:
+            menu_choice = int(input())
+        except:
+            print("Please Make a Valid Choice !")
+            print ('Press Enter to continue')
+            input()
 
         if menu_choice == 3:
+            print ('Thanks For Using --passlocker--')
+            print ('Press Enter Quit')
+            input()
             break
         #end if menu_choice = 3
 
