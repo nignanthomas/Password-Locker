@@ -148,6 +148,15 @@ def login_header():
 #end login_header
 
 
+def session_header():
+    cls()
+    header()
+    print ('\n')
+    login_header()
+    print(f"USER SESSION: {u_name}")
+    print ('\n')
+#end session_header
+
 
 
 
@@ -211,34 +220,19 @@ def main():
 
             logged = log_user(u_name, p_word)
             if logged :
-                cls()
-                header()
-                print ('\n')
-                login_header()
-
                 u_name = logged.username
-                print(f"USER SESSION: {u_name}")
-                print ('\n')
+
+                session_header()
 
                 login_choice = ""
                 while login_choice != "e":
-                    cls()
-                    header()
-                    print ('\n')
-                    login_header()
-                    print(f"USER SESSION: {u_name}")
-                    print ('\n')
+                    session_header()
 
                     log_menu()
                     login_choice = input()
 
                     if login_choice == "a":
-                        cls()
-                        header()
-                        print ('\n')
-                        login_header()
-                        print(f"USER SESSION: {u_name}")
-                        print ('\n')
+                        session_header()
 
                         print("       Add Credential")
                         print("     "+"="*20)
@@ -262,12 +256,7 @@ def main():
                         input()
                     #end choice = a (Add Cred)
                     elif login_choice == "b":
-                        cls()
-                        header()
-                        print ('\n')
-                        login_header()
-                        print(f"USER SESSION: {u_name}")
-                        print ('\n')
+                        session_header()
 
                         print("       Search Credential")
                         print("     "+"="*20)
@@ -285,12 +274,7 @@ def main():
                         input()
                     #end choice = b (Search Cred)
                     elif login_choice == "c":
-                        cls()
-                        header()
-                        print ('\n')
-                        login_header()
-                        print(f"USER SESSION: {u_name}")
-                        print ('\n')
+                        session_header()
 
                         print("       Display All")
                         print("     "+"="*20)
@@ -315,12 +299,7 @@ def main():
                         input()
                     #end choice = c (Display All)
                     elif login_choice == "d":
-                        cls()
-                        header()
-                        print ('\n')
-                        login_header()
-                        print(f"USER SESSION: {u_name}")
-                        print ('\n')
+                        session_header()
 
                         print("       Delete Credential")
                         print("     "+"="*20)
