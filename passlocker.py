@@ -1,6 +1,9 @@
 from user import User
 from credential import Credential
 
+import random
+import string
+
 import os
 def cls():
     os.system('cls' if os.name=='nt' else 'clear')
@@ -183,6 +186,7 @@ def main():
     menu_choice = 0
     while menu_choice != 3:
         menu()
+        print("\n Your Choice: ")
         try:
             menu_choice = int(input())
         except:
@@ -249,6 +253,7 @@ def main():
                     session_header(u_name)
 
                     log_menu()
+                    print ('\n Your Choice: ')
                     login_choice = input()
 
                     if login_choice == "a":
@@ -267,7 +272,15 @@ def main():
                         u_account = input()
 
                         print("Password:")
-                        pw_account = input()
+                        pass_choice = ""
+                        while pass_choice !="gp" or pass_choice !="ep":
+                            pass_choice = input("gp. Generate Password \n ep. Enter Password \n Choice: ")
+                            if pass_choice == "ep":
+                                pw_account = input()
+                                break
+                            elif pass_choice == "gp":                                
+                                pw_account = generate_password()
+                                break
 
                         save_creds(create_cred(u_name, app_name, u_account, pw_account))  # create and save new credential.
                         print ('\n')
