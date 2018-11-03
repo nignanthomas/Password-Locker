@@ -83,23 +83,23 @@ def del_cred(cred):
 ################GENERIC##############
 
 def header():
-    print("""
+    print(""" \033[1;31;47m
 
-                       .---.
-              o`  o   /    |\________________
-             o`   'oooo()  | ________   _   _)
-             `oo   o` \    |/        | | | |
-               `ooo'   `---'         "-" |_|
-                              _                _
-                             | |              | |
-          _ __   __ _ ___ ___| |     ___   ___| | _____ _ __
-         | '_ \ / _` / __/ __| |    / _ \ / __| |/ / _ \ '__|
-         | |_) | (_| \__ \__ \ |___| (_) | (__|   <  __/ |
-         | .__/ \__,_|___/___/______\___/ \___|_|\_\___|_|
-         | |
-         |_|          ____   _                 by nignanthomas
-         Note: Press |CTRL|+|C| to leave at anytime !
-
+                       .---.                                                   #
+              o`  o   /    |\________________                                  #
+             o`   'oooo()  | ________   _   _)                                 #
+             `oo   o` \    |/        | | | |                                   #
+               `ooo'   `---'         "-" |_|                                   #
+                              _                _                               #
+                             | |              | |                              #
+          _ __   __ _ ___ ___| |     ___   ___| | _____ _ __                   #
+         | '_ \ / _` / __/ __| |    / _ \ / __| |/ / _ \ '__|                  #
+         | |_) | (_| \__ \__ \ |___| (_) | (__|   <  __/ |                     #
+         | .__/ \__,_|___/___/______\___/ \___|_|\_\___|_|                     #
+         | |                                                                   #
+         |_|          ____   _                 by nignanthomas                 #
+         Note: Press |CTRL|+|C| to leave at anytime !                          #
+                                                                               #\033[0;0m
     """)
 #end header
 
@@ -107,7 +107,7 @@ def header():
 def menu():
     cls()
     header()
-    print("Hello, Welcome to you accounts manager!")
+    print("Hello, Welcome to your accounts manager!")
     print('\n')
     print('\n')
     print("What would you like to do?")
@@ -182,7 +182,7 @@ def login_header():
 ############  MAIN  ###############
 
 def main():
-    header()
+    # header()
     menu_choice = 0
     while menu_choice != 3:
         menu()
