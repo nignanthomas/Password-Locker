@@ -53,10 +53,10 @@ class Credential:
         '''
 
         for credential in cls.cred_list:
-            if credential.username == user_search && credential.cred_app == app_search:
+            if credential.username == user_search and credential.cred_app == app_search:
                 return credential
-            else:
-                return " :( Credential Not Found"
+            # else:
+            #     return " :( Credential Not Found"
     #end search_cred
 
 

@@ -52,9 +52,27 @@ class TestUser(unittest.TestCase):
         objects to our user_list
         '''
         self.new_user.save_user()
-        test_user = User("nignanthomas", "blablabla") # new user
+        test_user = User("silverstar", "zouglou") # new user
         test_user.save_user()
+        #print(test_user.username)
         self.assertEqual(len(User.user_list),2)
+    #end test_save_multiple_user
+
+
+    def test_auth_user(self):
+        '''
+        test to check if we can find a user by username/password and display information
+        '''
+
+        self.new_user.save_user()
+        test_user = User("silverstar", "zouglou") # new user
+        test_user.save_user()
+
+        found_user = User.find_by_userpass("silverstar", "zouglou")
+
+        self.assertEqual(found_user.username,test_user.username)
+    #end ath_user
+
 
 
 

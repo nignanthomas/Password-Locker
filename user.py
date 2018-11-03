@@ -27,6 +27,21 @@ class User:
     #end save_contact
 
 
+    @classmethod
+    def find_by_userpass(cls, username_search, password_search):
+        '''
+        Method that takes in a username/password and returns a user that matches that number.
+
+        Args:
+            number: Phone number to search for
+        Returns :
+            Contact of person that matches the number.
+        '''
+
+        for user in cls.user_list:
+            if user.username == username_search and user.password == password_search:
+                return user
+
 
 
 
