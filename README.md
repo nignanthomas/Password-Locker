@@ -36,7 +36,11 @@ Clone this using the command below:
 
 `git clone  https://github.com/nignanthomas/Password-Locker.git`
 
-Run the `./run.py` script on the terminal to open.
+Run `cd Password-Locker` in the terminal.
+
+Run `chmod +x passlocker.py` in the terminal.
+
+Run the `./passlocker.py` script on the terminal to open.
 
 ## Technologies Used
 
@@ -45,4 +49,4 @@ Run the `./run.py` script on the terminal to open.
 
 ## License
 
-MIT (C) 
+MIT (C)

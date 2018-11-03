@@ -1,3 +1,6 @@
+#!/usr/bin/env python3.6
+
+
 from user import User
 from credential import Credential
 
@@ -145,7 +148,7 @@ def generate_password(pass_length):
 
 
 def signup_header():
-    print(""" 
+    print("""
 
              __     __                   __
             /__` | / _` |\ |       |  | |__)
