@@ -83,7 +83,7 @@ def del_cred(cred):
 ################GENERIC##############
 
 def header():
-    print(""" \033[1;31;47m
+    print(""" \033[1;35;47m
 
                        .---.                                                   #
               o`  o   /    |\________________                                  #
@@ -145,7 +145,7 @@ def generate_password(pass_length):
 
 
 def signup_header():
-    print("""
+    print(""" 
 
              __     __                   __
             /__` | / _` |\ |       |  | |__)
