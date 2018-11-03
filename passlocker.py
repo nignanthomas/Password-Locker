@@ -133,6 +133,13 @@ def session_header(u_name):
 #end session_header
 
 
+def generate_password():
+    char = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*"
+    gen_pass = "".join(random.choice(char) for _ in range(8))
+    return gen_pass
+#end generate_password
+
+
 
 def signup_header():
     print("""
