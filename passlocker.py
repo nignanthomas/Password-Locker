@@ -136,9 +136,9 @@ def session_header(u_name):
 #end session_header
 
 
-def generate_password():
+def generate_password(pass_length):
     char = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*"
-    gen_pass = "".join(random.choice(char) for _ in range(8))
+    gen_pass = "".join(random.choice(char) for _ in range(pass_length))
     return gen_pass
 #end generate_password
 
@@ -278,8 +278,11 @@ def main():
                             if pass_choice == "ep":
                                 pw_account = input()
                                 break
-                            elif pass_choice == "gp":                                
-                                pw_account = generate_password()
+                            elif pass_choice == "gp":
+                                pass_length = 0
+                                while pass_length < 8:
+                                    pass_length = int(input("Enter the password length(>=8): "))
+                                pw_account = generate_password(pass_length)
                                 break
 
                         save_creds(create_cred(u_name, app_name, u_account, pw_account))  # create and save new credential.
