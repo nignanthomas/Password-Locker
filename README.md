@@ -21,25 +21,28 @@ Password Locker stores a user's password for their various accounts. It also all
 ## Behaviours
 | Behaviour | Input | Output |
 | ------------ |:----------:| -------: |
-| Create user account | User: Nyakio <br> Password: mashakura| User Nyakio / Password: mashakura created|
-| User Login|  User: Nyakio <br> Password: mashakura |  Hi mami, Go ahead....Select what you would like to do. |
-| Create a Account name/ Site name:|    instagram <br> Site user_name: karimi_kim <br> Site Password: 7kDzR6^l | New created account: <br> Account:facebook <br> User Name:kim <br> Password: 2F^wb9Ul  |
-| Display Credentials | DA| Site: instagram <br> User Name: karimi_kim <br> Password:2F^wb9Ul|
+| 1. Create user account | User: Nyakio <br> Password: mashakura| User Nyakio / Password: mashakura created|
+| 2. User Login|  User: Nyakio <br> Password: mashakura |  User session : nyakio. |
+| a. Add Credential|    instagram <br> Site user_name: nyak-insta <br> Site Password: 7kDzR6^l | New credential created <br> Appname:facebook <br> User Name:nyak-insta <br> Password: 7kDzR6^l  |
 | Genearate or Enter existing passord|ep or gp  |Ep: None <br> or <br> gp: 99rEzR5^j |
-| Exit Application | ex  | It was nice having you.......You're welcome to come again!!!! |
+| b. Search Credential |Appname: instagram  |Credential for instagram <br> User: Nyakio <br> Password: mashakura  |
+| c. Display Credentials | DA| Appname: instagram <br> User Name: nyak-insta <br> Password:7kDzR6^l|
+| d. Delete Credentials | Appname: instagram <br> Sure: Y| Credential deleted|
+| 3. Exit Application | 3  | It was nice having you.......You're welcome to come again!!!! |
 
 ## Installation
 
 Clone this using the command below:
 
-git clone  https://github.com/christinekarimi/password-locker.git
+`git clone  https://github.com/nignanthomas/Password-Locker.git`
 
-Run the ./run.py script on the terminal to open.
+Run the `./run.py` script on the terminal to open.
 
 ## Technologies Used
 
 * Python 3.6
+* Git version Control
 
 ## License
 
-MIT (C) **[Christine Karimi](https://github.com/christinekarimi)**
+MIT (C) 
