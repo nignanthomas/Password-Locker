@@ -116,7 +116,9 @@ def menu():
     print("What would you like to do?")
     print('\n')
     print("1. Sign Up")
+    print('\n')
     print("2. Login")
+    print('\n')
     print("3. Exit")
 #end menu
 
@@ -134,7 +136,7 @@ def session_header(u_name):
     header()
     print ('\n')
     login_header()
-    print(f"USER SESSION: {u_name}")
+    print(f" \033[1;33;40m USER SESSION: {u_name} \033[0;0m ")
     print ('\n')
 #end session_header
 
@@ -193,12 +195,12 @@ def main():
         try:
             menu_choice = int(input())
         except:
-            print("Please Make a Valid Choice !")
+            print("\033[1;31;40m Please Make a Valid Choice ! \033[0;0m")
             print ('Press Enter to continue')
             input()
 
         if menu_choice == 3:
-            print ('Thanks For Using --passlocker--')
+            print ('\033[1;31;40m Thanks For Using --passlocker-- \033[0;0m ')
             print ('Press Enter Quit')
             input()
             break
@@ -223,7 +225,7 @@ def main():
 
             save_users(create_user(u_name, p_word))  # create and save new user.
             print ('\n')
-            print(f"New User {u_name} / Password: {p_word} created")
+            print(f"\033[1;32;40m New User {u_name} / Password: {p_word} created \033[0;0m")
             print ('Press Enter to continue')
             input()
         #end if menu_choice = 1
@@ -290,7 +292,7 @@ def main():
 
                         save_creds(create_cred(u_name, app_name, u_account, pw_account))  # create and save new credential.
                         print ('\n')
-                        print(f"New Credential for {app_name} / User Account : {u_account}/ Password: {pw_account} created")
+                        print(f" \033[1;32;40m New Credential for {app_name} / User Account : {u_account}/ Password: {pw_account} created \033[0;0m ")
                         print ('Press Enter to continue')
                         input()
                     #end choice = a (Add Cred)
@@ -304,11 +306,11 @@ def main():
                         app_name = input("Enter App Name:")
                         found_cred = find_creds(u_name, app_name)
                         if found_cred:
-                            print(f"Here are the credentials for {found_cred.cred_app}:")
+                            print(f" \033[1;32;40m Here are the credentials for {found_cred.cred_app}: \033[0;0m ")
                             print(f"User Account: {found_cred.cred_user}")
                             print(f"Password: {found_cred.cred_pass}")
                         else:
-                            print(f"Credentials Not Found for {app_name}!")
+                            print(f" \033[1;31;40m Credentials Not Found for {app_name}! \033[0;0m ")
                         print("Press Enter to continue")
                         input()
                     #end choice = b (Search Cred)
@@ -332,7 +334,7 @@ def main():
                             print('\n')
                         else:
                             print('\n')
-                            print("You dont seem to have any credentials saved yet")
+                            print(" \033[1;31;40m You dont seem to have any credentials saved yet. \033[0;0m ")
                             print('\n')
                         print("Press Enter to continue")
                         input()
@@ -350,13 +352,13 @@ def main():
                             print(f"Here are the credentials for {found_cred.cred_app}:")
                             print(f"User Account: {found_cred.cred_user}")
                             print(f"Password: {found_cred.cred_pass}")
-                            if input("Are you sure you want to delete it? (Y/N) ").upper() == "Y":
+                            if input("\033[1;31;40m Are you sure you want to delete it? (Y/N) \033[0;0m ").upper() == "Y":
                                 del_cred(found_cred)
                                 print()
                             print("Press Enter to continue")
-                            input(f"Credentials for {found_cred.cred_app} deleted.")
+                            input(f" \033[1;32;40m Credentials for {found_cred.cred_app} deleted. \033[0;0m ")
                         else:
-                            print(f"Credentials Not Found for {app_name}!")
+                            print(f" \033[1;31;40m Credentials Not Found for {app_name}! \033[0;0m ")
                             print("Press Enter to continue")
                             input()
 
@@ -366,7 +368,7 @@ def main():
 
 
             else:
-                print("User Not Found, Try Again!")
+                print("\033[1;31;40m User Not Found, Try Again! \033[0;0m ")
                 print("Press Enter to continue")
                 input()
             #end if logged (user authenticated)
