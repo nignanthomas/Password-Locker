@@ -1,6 +1,3 @@
-#from user import User
-
-
 class Credential:
     """
     Class that generates new instances of users
@@ -41,7 +38,7 @@ class Credential:
 
 
     @classmethod
-    def search_cred(cls, user_search, app_search,):
+    def search_cred(cls, user_search, app_search):
         '''
         Method that takes in an Appname and username and returns a credential that matches.
 
@@ -71,6 +68,9 @@ class Credential:
                 all_user_creds.append(credential)
         return all_user_creds
     #end display_creds
+
+
+
 
 
 

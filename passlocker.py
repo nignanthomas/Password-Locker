@@ -4,6 +4,7 @@
 from user import User
 from credential import Credential
 
+import pyperclip
 import random
 import string
 
@@ -83,6 +84,9 @@ def del_cred(cred):
 
 
 
+
+
+
 ################GENERIC##############
 
 def header():
@@ -134,9 +138,9 @@ def log_menu():
 def session_header(u_name):
     cls()
     header()
-    print ('\n')
+    # print ('\n')
     login_header()
-    print(f" \033[1;33;40m USER SESSION: {u_name} \033[0;0m ")
+    print(f"            \033[1;33;40m USER SESSION: {u_name} \033[0;0m ")
     print ('\n')
 #end session_header
 
@@ -151,13 +155,11 @@ def generate_password(pass_length):
 
 def signup_header():
     print("""
-
              __     __                   __
             /__` | / _` |\ |       |  | |__)
             .__/ | \__> | \|       \__/ |
 
         ====================================
-
     """)
 
 #end signup_header
@@ -165,13 +167,11 @@ def signup_header():
 
 def login_header():
     print("""
-
                   __   __
             |    /  \ / _` | |\ |
             |___ \__/ \__> | | \|
 
         ==============================
-
     """)
 
 #end login_header
@@ -209,7 +209,7 @@ def main():
         elif menu_choice == 1:
             cls()
             header()
-            print ('\n')
+            # print ('\n')
             signup_header()
             print ('\n')
 
@@ -233,7 +233,7 @@ def main():
         elif menu_choice == 2:
             cls()
             header()
-            print ('\n')
+            # print ('\n')
             login_header()
             print ('\n')
 
@@ -276,6 +276,7 @@ def main():
                         print("User Account:")
                         u_account = input()
 
+                        print ('\n')
                         print("Password:")
                         pass_choice = ""
                         while pass_choice !="gp" or pass_choice !="ep":
@@ -306,9 +307,11 @@ def main():
                         app_name = input("Enter App Name:")
                         found_cred = find_creds(u_name, app_name)
                         if found_cred:
-                            print(f" \033[1;32;40m Here are the credentials for {found_cred.cred_app}: \033[0;0m ")
+                            print(f" \033[1;32;40m Credentials for {found_cred.cred_app} Found and Copied to Clipboard: \033[0;0m ")
                             print(f"User Account: {found_cred.cred_user}")
                             print(f"Password: {found_cred.cred_pass}")
+                            to_copy = f"Appname: {found_cred.cred_app} @@ User Account: {found_cred.cred_user}  @@ Password: {found_cred.cred_pass}"
+                            pyperclip.copy(to_copy)
                         else:
                             print(f" \033[1;31;40m Credentials Not Found for {app_name}! \033[0;0m ")
                         print("Press Enter to continue")
