@@ -75,6 +75,19 @@ class TestCredential(unittest.TestCase):
 
 
 
+    def test_search_cred(self):
+        '''
+        test to check if we can find a cred by username/appname and display information
+        '''
+
+        self.new_cred.save_cred()
+        test_cred = Credential("ClintonClin","Twitter", "clintwitt", "clintwittpassword") # new credential
+        test_cred.save_cred()
+
+        found_cred = Credential.search_cred("ClintonClin","Twitter")
+
+        self.assertEqual(found_cred.cred_user,test_cred.cred_user)
+
 
 
 
