@@ -24,7 +24,7 @@ Password Locker stores a user's password for their various accounts. It also all
 | 1. Create user account | User: Nyakio <br> Password: mashakura| User Nyakio / Password: mashakura created|
 | 2. User Login|  User: Nyakio <br> Password: mashakura |  User session : nyakio. |
 | a. Add Credential|    instagram <br> Site user_name: nyak-insta <br> Site Password: 7kDzR6^l | New credential created <br> Appname:facebook <br> User Name:nyak-insta <br> Password: 7kDzR6^l  |
-| Genearate or Enter existing passord|ep or gp  |Ep: None <br> or <br> gp: 99rEzR5^j |
+| Genearate or Enter existing password|ep or gp  |Ep: None <br> or <br> gp: 99rEzR5^j |
 | b. Search Credential |Appname: instagram  |Credential for instagram <br> User: Nyakio <br> Password: mashakura  |
 | c. Display Credentials | DA| Appname: instagram <br> User Name: nyak-insta <br> Password:7kDzR6^l|
 | d. Delete Credentials | Appname: instagram <br> Sure: Y| Credential deleted|

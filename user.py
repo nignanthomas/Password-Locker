@@ -30,10 +30,11 @@ class User:
     @classmethod
     def find_by_userpass(cls, username_search, password_search):
         '''
-        Method that takes in a username/password and returns a user that matches that number.
+        Method that takes in a username/password and authenticates the user matching.
 
         Args:
-            number: Phone number to search for
+            username_search: User name to authenticate.
+            password_search: His password.
         Returns :
             Contact of person that matches the number.
         '''

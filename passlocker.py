@@ -90,6 +90,10 @@ def del_cred(cred):
 ################GENERIC##############
 
 def header():
+    '''
+    Function to display a header
+    '''
+
     print(""" \033[1;35;47m
 
                        .---.                                                   #
@@ -112,6 +116,10 @@ def header():
 
 
 def menu():
+    '''
+    Function to display the Main Menu
+    '''
+
     cls()
     header()
     print("Hello, Welcome to your accounts manager!")
@@ -127,6 +135,10 @@ def menu():
 #end menu
 
 def log_menu():
+    '''
+    Function to display the menu for a logged in user
+    '''
+
     print("a. Add Credential")
     print("b. Search Credential")
     print("c. Display all Credentials")
@@ -136,6 +148,10 @@ def log_menu():
 
 
 def session_header(u_name):
+    '''
+    Function to display the header, the login title and the name logged user
+    '''
+
     cls()
     header()
     # print ('\n')
@@ -146,6 +162,9 @@ def session_header(u_name):
 
 
 def generate_password(pass_length):
+    '''
+    Function to generate a random password with a custom length
+    '''
     char = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*"
     gen_pass = "".join(random.choice(char) for _ in range(pass_length))
     return gen_pass
@@ -154,6 +173,9 @@ def generate_password(pass_length):
 
 
 def signup_header():
+    '''
+    Function to display sign up title
+    '''
     print("""
              __     __                   __
             /__` | / _` |\ |       |  | |__)
@@ -166,6 +188,9 @@ def signup_header():
 
 
 def login_header():
+    '''
+    Function to display login title
+    '''
     print("""
                   __   __
             |    /  \ / _` | |\ |

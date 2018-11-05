@@ -61,6 +61,11 @@ class Credential:
     def display_creds(cls, user_search):
         '''
         method that returns the credentials list
+
+        Args:
+            user_search: Automatically takes the name of the logged in user.
+        Returns :
+            List of all credentials of the logged in user.
         '''
         all_user_creds =[]
         for credential in cls.cred_list:
