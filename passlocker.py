@@ -134,13 +134,13 @@ def menu():
     print("Hello, Welcome to your accounts manager!")
     print('\n')
     print('\n')
-    print("What would you like to do?")
+    print("             What would you like to do?")
     print('\n')
-    print("1. Sign Up")
+    print("             1. Sign Up")
     print('\n')
-    print("2. Login")
+    print("             2. Login")
     print('\n')
-    print("3. Exit")
+    print("             3. Exit")
 #end menu
 
 def log_menu():
@@ -148,11 +148,11 @@ def log_menu():
     Function to display the menu for a logged in user
     '''
 
-    print("a. Add Credential")
-    print("b. Search Credential")
-    print("c. Display all Credentials")
-    print("d. Delete Credential")
-    print("e. Logout")
+    print("             a. Add Credential")
+    print("             b. Search Credential")
+    print("             c. Display all Credentials")
+    print("             d. Delete Credential")
+    print("             e. Logout")
 #end log_menu
 
 
@@ -225,9 +225,9 @@ def main():
     menu_choice = 0
     while menu_choice != 3:
         menu()
-        print("\n Your Choice: ")
+        print("\n               Your Choice: ")
         try:
-            menu_choice = int(input())
+            menu_choice = int(input("               "))
         except:
             print("\033[1;31;40m Please Make a Valid Choice ! \033[0;0m")
             print ('Press Enter to continue')
@@ -247,14 +247,14 @@ def main():
             signup_header()
             print ('\n')
 
-            print("New User")
-            print("="*10)
+            print("     New User")
+            print("     "+"="*10)
             print ('\n')
 
-            print("Username:")
+            print("     Username:")
             u_name = input()
-
-            print("Password:")
+            print("\n")
+            print("     Password:")
             p_word = input()
 
             save_users(create_user(u_name, p_word))  # create and save new user.
@@ -271,14 +271,14 @@ def main():
             login_header()
             print ('\n')
 
-            print("Enter Your Username and Password")
-            print("="*10)
+            print("     Enter Your Username and Password")
+            print("     "+"="*10)
             print ('\n')
 
-            print("Username:")
+            print("     Username:")
             u_name = input()
-
-            print("Password:")
+            print ('\n')
+            print("     Password:")
             p_word = input()
 
             logged = log_user(u_name, p_word)
@@ -292,8 +292,8 @@ def main():
                     session_header(u_name)
 
                     log_menu()
-                    print ('\n Your Choice: ')
-                    login_choice = input()
+                    print ('\n              Your Choice: ')
+                    login_choice = input("             ")
 
                     if login_choice == "a":
                         session_header(u_name)
@@ -306,10 +306,10 @@ def main():
 
                         print("App Name:")
                         app_name = input()
-
+                        print("     "+"="*10)
                         print("User Account:")
                         u_account = input()
-
+                        print("     "+"="*10)
                         print ('\n')
                         print("Password:")
                         pass_choice = ""
