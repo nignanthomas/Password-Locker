@@ -4,6 +4,7 @@
 from user import User
 from credential import Credential
 
+import datetime
 import pyperclip
 import random
 import string
@@ -89,6 +90,13 @@ def del_cred(cred):
 
 ################GENERIC##############
 
+def today():
+    x = datetime.datetime.now()
+    date_today =  x.strftime("%A") + ", " + str(x.day) + " " + x.strftime("%B") + " " + str(x.year)
+    print(f"                                                         {date_today}")
+#end today
+
+
 def header():
     '''
     Function to display a header
@@ -112,6 +120,7 @@ def header():
          Note: Press |CTRL|+|C| to leave at anytime !                          #
                                                                                #\033[0;0m
     """)
+    today()
 #end header
 
 
